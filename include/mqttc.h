@@ -1,5 +1,5 @@
-#ifndef __MQTT_H__
-#define __MQTT_H__
+#ifndef __MQTTC_H__
+#define __MQTTC_H__
 
 /*
 MIT License
@@ -1565,4 +1565,4 @@ enum MQTTErrors __mqtt_ping(struct mqtt_client *client);
  */
 enum MQTTErrors mqtt_disconnect(struct mqtt_client *client);
 
-#endif
+#endif /* __MQTTC_H__ */
