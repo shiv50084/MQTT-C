@@ -52,12 +52,12 @@ enum MQTTErrors mqtt_sync(struct mqtt_client *client) {
         if (err != MQTT_OK) return err;
     }
 
-    /* Call receive */
-    err = __mqtt_recv(client);
-    if (err != MQTT_OK) return err;
-
     /* Call send */
     err = __mqtt_send(client);
+    if (err != MQTT_OK) return err;
+
+    /* Call receive */
+    err = __mqtt_recv(client);
     return err;
 }
 
